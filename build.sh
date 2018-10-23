@@ -1,4 +1,6 @@
 #!/bin/sh
+set -e
+
 cd graphql-playground/packages/graphql-playground-react
 yarn
 yarn build
