@@ -1,0 +1,4 @@
+[submodule "graphql-playground"]
+	path = graphql-playground
+	url = https://github.com/hsldevcom/graphql-playground
+	branch = result_tooltip
