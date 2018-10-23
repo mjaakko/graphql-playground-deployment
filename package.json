@@ -1,0 +1,7 @@
+{
+  "name": "graphql-playground-html-deployment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jaakko Malkki <Jaakko.Malkki@hsl.fi>",
+  "license": "MIT"
+}
