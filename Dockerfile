@@ -11,7 +11,6 @@ ADD .git ./.git
 ADD graphql-playground ./graphql-playground
 ADD build.sh index.js index.html package.json yarn.lock ./
 
-RUN ls
 RUN ./build.sh
 
 RUN yarn
