@@ -590,6 +590,27 @@
                    return React.createElement("div", { id: "map", style: {height:"320px", width:"320px" }});
                  }
                }
+          } else if (type === 'UnixTimestampMilliseconds') {
+            return class Milliseconds extends React.Component {
+              render() {
+                return React.createElement("p", null, new Date(parseInt(this.props.value)).toString());
+              }
+            }
+          } else if (type === 'UnixTimestampSeconds') {
+            return class Seconds extends React.Component {
+              render() {
+                return React.createElement("p", null, new Date(this.props.value * 1000).toString());
+              }
+            }
+          } else if (type === 'SecondsSinceMidnight') {
+            return class SecondsSinceMidnight extends React.Component {
+              render() {
+                var secondsSinceMidnight = parseFloat(this.props.value);
+                var hours = Math.floor(secondsSinceMidnight / 3600);
+                var minutes = Math.floor((secondsSinceMidnight - hours * 3600) / 60);
+                return React.createElement("p", null, hours+":"+(minutes < 10 ? "0"+minutes : minutes));
+              }
+            }
           } else {
             return null
           }
